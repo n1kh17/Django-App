@@ -1,6 +1,27 @@
+/*not used anywhere*/
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   margin: 0;
   padding: 20px;
+}
+.container {
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  border: 1px solid #c3e6cb; /* Slightly darker green border */
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.container::before {
+  content: "✔"; /* Checkmark icon */
+  font-weight: bold;
+  margin-right: 10px;
+  color: #155724;
 }
