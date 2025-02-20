@@ -1,0 +1,29 @@
+{% extends 'bank/base.html' %} {% block content %}
+<h2>Accounts</h2>
+
+<!-- Account Creation Form -->
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="user_id" placeholder="User ID" required />
+  <input
+    type="text"
+    name="account_number"
+    placeholder="Account Number"
+    required
+  />
+  <input type="text" name="account_type" placeholder="Account Type" required />
+  <button type="submit">Create Account</button>
+</form>
+
+<!-- Account List -->
+<h3>Account List</h3>
+<ul>
+  {% for account in accounts %}
+  <li>
+    {{ account.account_number }} - {{ account.account_type }} (User: {{ account.user_id }})
+  </li>
+  {% empty %}
+  <li>No accounts found.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

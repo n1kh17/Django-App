@@ -1,0 +1,19 @@
+created tables(users,accounts) in postgres
+created functions (create user,get all users,update users,delete user) in postgres
+created django->banking project-> bank app
+in banking->settings.py
+   DATABASES = {
+    "default": {
+        "ENGINE": 'django.db.backends.postgresql',
+        "NAME": "umasaisree",
+        'USER': 'postgres',
+        'PASSWORD':'',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        }
+    }
+pip install djangorestframework
+ in settings.py update add 'rest_framework' to installed apps
+bank/views.py write create user function
+in bank create urls.py
+in project/update urls.py
